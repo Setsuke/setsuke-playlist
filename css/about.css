@@ -1,0 +1,91 @@
+/* About styles */
+.about-header {
+  margin-bottom: 37px;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(250px, 36%) 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.avatar {
+  margin: 0;
+}
+.avatar img {
+  width: 100%;
+  aspect-ratio: 1.05;
+  object-fit: cover;
+  border: 1px solid #8c1736;
+  border-radius: 20px;
+}
+.avatar figcaption {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+.avatar figcaption strong {
+  display: block;
+  color: var(--red);
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+.about-copy {
+  border-left: 1px solid #333;
+  padding-left: 45px;
+}
+.about-copy h2 {
+  font-size: 43px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+.about-copy .alias {
+  color: var(--red);
+  font-size: 23px;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+.about-copy p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+.about-copy .section-title {
+  font-size: 25px;
+}
+.project-card {
+  margin-top: 40px;
+  padding: 24px 28px;
+  background: linear-gradient(120deg, #1a1517, #111);
+  border: 1px solid #36343a;
+  border-top: 3px solid var(--red);
+  border-radius: 12px;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.project-card h2 {
+  font-size: 23px;
+  margin: 0;
+}
+.project-card p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #ceced5;
+}
+.project-card .actions {
+  margin: 0;
+}
+.tech {
+  display: flex;
+  gap: 8px;
+}
+.footer {
+  margin: 30px 0 0;
+  color: #85858f;
+  font-size: 11px;
+  text-align: center;
+  font-style: italic;
+}

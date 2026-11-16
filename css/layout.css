@@ -1,0 +1,118 @@
+/* Layout styles */
+.sidebar {
+  position: fixed;
+  z-index: 20;
+  inset: 0 auto 0 0;
+  width: var(--sidebar-width);
+  border-right: 1px solid #29292e;
+  background:
+    linear-gradient(
+      133deg,
+      transparent 47%,
+      #59031b 47%,
+      #9c0027 49%,
+      transparent 49.2%
+    ),
+    #080809;
+  padding: 24px 13px;
+  display: flex;
+  flex-direction: column;
+}
+.brand {
+  display: block;
+  width: 56px;
+  height: 70px;
+  margin: 0 18px 22px;
+  color: var(--red);
+}
+.brand svg {
+  height: 100%;
+  width: 100%;
+}
+.sidebar nav {
+  display: grid;
+  gap: 7px;
+}
+.sidebar nav a {
+  padding: 10px 21px;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 700;
+  border-left: 5px solid transparent;
+}
+.sidebar nav a.active {
+  background: linear-gradient(90deg, #840024, #470618);
+  border-left-color: var(--red);
+}
+.sidebar nav a:hover {
+  background-color: #211019;
+}
+.side-footer {
+  margin-top: auto;
+  padding: 22px 10px;
+  color: #777780;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+.side-footer strong {
+  display: block;
+  color: #c9c9d0;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.side-footer span {
+  display: block;
+  letter-spacing: 0;
+  margin-top: 12px;
+}
+main {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  padding: 34px 38px 30px;
+  position: relative;
+  isolation: isolate;
+}
+main:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 330px;
+  background:
+    linear-gradient(0deg, var(--bg), transparent 95%),
+    linear-gradient(90deg, #09090bed 0%, #22000a44 60%, #44031677),
+    url('../assets/site/hero.png') center top/cover no-repeat;
+}
+main:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+  width: 210px;
+  height: 150px;
+  background: linear-gradient(
+    135deg,
+    transparent 36%,
+    #9e062b88 36%,
+    #61021666 58%,
+    transparent 58%
+  );
+  pointer-events: none;
+}
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(310px, 35%);
+  gap: 28px;
+  align-items: start;
+}
+.content-column {
+  min-width: 0;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0 0 22px;
+}

@@ -1,0 +1,70 @@
+/* Songs styles */
+.table-head,
+.song-row {
+  display: grid;
+  grid-template-columns:
+    30px 51px minmax(0, 1.5fr) minmax(70px, 0.8fr) minmax(40px, 0.6fr)
+    16px;
+  align-items: center;
+  gap: 12px;
+}
+.table-head {
+  color: #b8b8c0;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 0 12px 13px;
+  border-bottom: 1px solid var(--line);
+}
+.song-row {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  width: 100%;
+  padding: 12px;
+  text-align: left;
+  min-height: 77px;
+}
+.song-row:hover {
+  background: #ffffff08;
+}
+.song-row.selected {
+  border-radius: 6px;
+  background: linear-gradient(100deg, #69021d, #3f0614 60%, #65021c);
+  border-bottom-color: transparent;
+}
+.rank {
+  font-size: 19px;
+  font-weight: 700;
+}
+.song-row img,
+.mini-song img {
+  width: 51px;
+  height: 51px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.song-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.35;
+}
+.song-artist,
+.song-album {
+  font-size: 13px;
+}
+.song-album {
+  color: #a2a2ab;
+}
+.selected-indicator {
+  color: var(--red);
+  font-size: 18px;
+}
+
+/* Allow supplied titles and album names to wrap on narrow screens. */
+.song-title,
+.song-artist,
+.song-album {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}

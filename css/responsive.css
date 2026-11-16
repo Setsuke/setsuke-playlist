@@ -1,0 +1,316 @@
+/* Responsive styles */
+@media (min-width: 1500px) {
+  main {
+    padding: 38px 40px;
+  }
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 35%;
+  }
+  .song-row {
+    min-height: 82px;
+  }
+  .song-title {
+    font-size: 17px;
+  }
+  .song-artist {
+    font-size: 16px;
+  }
+  .detail {
+    padding: 28px;
+  }
+  .detail h2 {
+    font-size: 40px;
+  }
+  .artist-card {
+    min-height: 320px;
+  }
+}
+@media (max-width: 1150px) {
+  :root {
+    --sidebar-width: 140px;
+  }
+  .sidebar {
+    width: var(--sidebar-width);
+    padding-inline: 8px;
+  }
+  .sidebar nav a {
+    padding-inline: 12px;
+    font-size: 15px;
+  }
+  main {
+    margin-left: var(--sidebar-width);
+    padding: 28px 24px;
+  }
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 310px;
+    gap: 18px;
+  }
+  .song-album,
+  .album-heading {
+    display: none;
+  }
+  .table-head,
+  .song-row {
+    grid-template-columns: 25px 42px minmax(0, 1fr) 65px 12px;
+    gap: 8px;
+  }
+  .song-row img {
+    width: 42px;
+    height: 42px;
+  }
+  .detail {
+    padding: 18px;
+  }
+  .artist-grid {
+    grid-template-columns: 1fr;
+  }
+  .artist-card {
+    min-height: 230px;
+  }
+  .about-grid {
+    gap: 25px;
+  }
+  .about-copy {
+    padding-left: 25px;
+  }
+  .about-copy h2 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 850px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .detail {
+    position: static;
+    margin-top: 0;
+    scroll-margin-top: 90px;
+    max-width: none;
+  }
+  .detail > img {
+    max-height: 330px;
+    aspect-ratio: 1.8;
+  }
+  .song-title {
+    font-size: 16px;
+  }
+  .song-artist {
+    font-size: 14px;
+  }
+  .table-head,
+  .song-row {
+    grid-template-columns: 30px 50px minmax(0, 1fr) 95px 16px;
+  }
+  .song-row img {
+    width: 50px;
+    height: 50px;
+  }
+  .artist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .artist-card {
+    min-height: 250px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr 1.2fr;
+    align-items: start;
+  }
+  .about-copy p {
+    font-size: 14px;
+  }
+  .about-copy .alias {
+    font-size: 18px;
+  }
+  .about-copy h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .sidebar {
+    inset: 0 0 auto;
+    width: 100%;
+    height: 72px;
+    flex-direction: row;
+    align-items: center;
+    border-right: 0;
+    border-bottom: 1px solid #3a252d;
+    padding: 8px 14px;
+    background: #09090bf5;
+    backdrop-filter: blur(14px);
+  }
+  .brand {
+    width: 32px;
+    height: 45px;
+    margin: 0 auto 0 0;
+    flex: none;
+  }
+  .sidebar nav {
+    display: flex;
+    gap: 4px;
+  }
+  .sidebar nav a {
+    font-size: 12px;
+    border-left: 0;
+    border-bottom: 3px solid transparent;
+    border-radius: 5px;
+    padding: 8px 11px;
+  }
+  .sidebar nav a.active {
+    border-left: 0;
+    border-bottom-color: var(--red);
+  }
+  .side-footer {
+    display: none;
+  }
+  main {
+    margin-left: 0;
+    padding: 99px 18px 24px;
+  }
+  main:before {
+    top: 72px;
+    height: 240px;
+  }
+  main:after {
+    top: 72px;
+    width: 130px;
+  }
+  .page-header {
+    margin-bottom: 29px;
+  }
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+    gap: 12px;
+  }
+  .eyebrow:after {
+    width: 55px;
+  }
+  h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+    margin-top: 15px;
+  }
+  .page-header p {
+    font-size: 15px;
+    margin-top: 8px;
+  }
+  .toolbar {
+    gap: 12px;
+    margin-bottom: 17px;
+  }
+  .search {
+    flex-basis: 100%;
+  }
+  .filters {
+    gap: 7px;
+  }
+  .list-meta {
+    align-items: flex-start;
+  }
+  .list-meta small {
+    max-width: 180px;
+  }
+  .table-head,
+  .song-row {
+    grid-template-columns: 24px 40px minmax(0, 1fr) 66px 8px;
+    gap: 8px;
+  }
+  .song-row {
+    padding: 10px 5px;
+    min-height: 68px;
+  }
+  .song-row img {
+    width: 40px;
+    height: 40px;
+  }
+  .song-title {
+    font-size: 13px;
+  }
+  .song-artist {
+    font-size: 11px;
+  }
+  .rank {
+    font-size: 16px;
+  }
+  .table-head {
+    font-size: 8px;
+    padding-inline: 5px;
+  }
+  .detail {
+    padding: 20px;
+  }
+  .detail h2 {
+    font-size: 32px;
+  }
+  .detail > img {
+    aspect-ratio: 1.2;
+    max-height: none;
+  }
+  .artist-grid {
+    gap: 12px;
+  }
+  .artist-card {
+    min-height: 220px;
+  }
+  .card-info {
+    left: 13px;
+    right: 13px;
+    bottom: 14px;
+  }
+  .card-info strong {
+    font-size: 26px;
+  }
+  .card-bottom {
+    display: block;
+    font-size: 11px;
+  }
+  .card-bottom span {
+    display: block;
+  }
+  .selected-badge {
+    font-size: 9px;
+    top: 10px;
+    left: 10px;
+  }
+  .artist-detail > img {
+    aspect-ratio: 2;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .avatar {
+    max-width: 330px;
+    margin: auto;
+  }
+  .about-copy {
+    padding-left: 0;
+    border: 0;
+  }
+  .about-copy h2 {
+    font-size: 34px;
+  }
+  .about-copy p {
+    font-size: 16px;
+  }
+  .project-card {
+    padding: 23px;
+    gap: 20px;
+    margin-top: 25px;
+  }
+  .project-card h2 {
+    font-size: 21px;
+  }
+  .skip {
+    left: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

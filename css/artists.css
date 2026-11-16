@@ -1,0 +1,110 @@
+/* Artists styles */
+.artist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.artist-card {
+  padding: 0;
+  overflow: hidden;
+  background: #151515;
+  border: 1px solid #5c5c64;
+  border-radius: 15px;
+  position: relative;
+  text-align: left;
+  min-height: 285px;
+  isolation: isolate;
+}
+.artist-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  transition: transform 0.4s;
+}
+.artist-card:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #070709 0%, #07070900 80%);
+  z-index: -1;
+}
+.artist-card:hover img {
+  transform: scale(1.05);
+}
+.artist-card.selected {
+  border: 2px solid var(--red);
+}
+.card-info {
+  position: absolute;
+  bottom: 21px;
+  left: 21px;
+  right: 21px;
+}
+.card-info strong {
+  font-size: 32px;
+  display: block;
+  letter-spacing: -1px;
+}
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #d0d0d6;
+  gap: 5px;
+}
+.card-bottom span:last-child {
+  color: #ff285d;
+}
+.selected-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #c50034;
+  border-radius: 5px;
+  padding: 3px 9px;
+  font-size: 11px;
+}
+.artist-detail > img {
+  aspect-ratio: 2.3;
+}
+.artist-detail .note {
+  min-height: 0;
+}
+.mini-song {
+  display: grid;
+  grid-template-columns: 26px 39px 1fr 12px;
+  gap: 12px;
+  align-items: center;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.mini-song img {
+  width: 39px;
+  height: 39px;
+}
+.mini-song:hover {
+  color: #ff4878;
+}
+.mini-song .rank {
+  font-size: 16px;
+  color: var(--red);
+}
+.artist-count {
+  font-size: 12px;
+  color: #c9c9d2;
+}
+.artist-detail .button {
+  width: 100%;
+  margin-top: 22px;
+}
+.external-artist {
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 12px;
+  margin-top: 18px;
+}

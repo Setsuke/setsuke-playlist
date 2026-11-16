@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#09090b" />
+    <meta
+      name="description"
+      content="Setsuke’s personal selection: five artists, five songs each. Explore 25 songs and their albums."
+    />
+    <title>Setsuke’s 25 — Songs that stayed</title>
+    <link rel="icon" href="assets/site/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="data.js"></script>
+    <script defer src="js/model.js"></script>
+    <script defer src="js/router.js"></script>
+    <script defer src="js/components.js"></script>
+    <script defer src="js/views/songs.js"></script>
+    <script defer src="js/views/artists.js"></script>
+    <script defer src="js/views/about.js"></script>
+    <script defer src="js/download.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <aside class="sidebar">
+      <a class="brand" href="#/top" aria-label="Setsuke’s 25 home">
+        <svg viewBox="0 0 70 90" aria-hidden="true">
+          <path
+            d="M62 4 18 30 12 47 43 59 7 87 28 85 59 58 61 45 30 34Z"
+            fill="currentColor"
+          />
+        </svg>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#/top" data-page="top">My Top 25</a>
+        <a href="#/artists" data-page="artists">Artists</a>
+        <a href="#/about" data-page="about">About</a>
+      </nav>
+      <div class="side-footer">
+        DEVELOPED BY
+        <br />
+        <strong>SETSUKE</strong>
+      </div>
+    </aside>
+    <main id="main" tabindex="-1"></main>
+    <div id="live" class="sr-only" aria-live="polite"></div>
+  </body>
+</html>
