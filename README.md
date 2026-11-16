@@ -2,6 +2,10 @@
 
 A personal music selection: five artists, five songs each. Built with HTML, CSS and vanilla JavaScript, with no frameworks or external dependencies.
 
+## Deployed
+
+https://setsuke.github.io/setsuke-playlist/
+
 ## Run
 
 Open `index.html` in your browser. No installation or build step is required.
